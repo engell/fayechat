@@ -7,8 +7,9 @@ $(function() {
 
 	$('#publish').click(function(){
 		if($('#text').val()){
+		contend = ("<b>" + $('#user').val() + "</b>: " + $('#text').val());
 			client.publish('/messages', {
-			  text: $('#text').val()
+			  text: contend
 			});
 			$('#text').val('')
 		}

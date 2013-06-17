@@ -7,7 +7,9 @@ head
     title FayeChat
   body
     h1 Chat!
-    #messages
+    ul#messages
+    input#user(type="text", value="User", onfocus="if (this.value=='User') this.value='';")
+		br
     input#text(type='text')
     button#publish Send
     script(src='javascripts/client.js')
